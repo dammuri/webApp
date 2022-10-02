@@ -1,0 +1,8 @@
+
+a.nav-link, a.navbar-brand {
+    color:white;
+}
+
+a.nav-link:hover, a.navbar-brand:hover {
+    color: brown;
+}

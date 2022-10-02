@@ -1,0 +1,45 @@
+<main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Our NFT</h1>
+          <p class="lead text-muted">This is limited collection for every of you. All of this made by artist that dedicated to art and thoose who love NFT and blockchain technology. Join with us</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Explorer</a>
+            <a href="#" class="btn btn-secondary my-2">Join Us!</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <% if (data.length<1) { %>
+          <p class="lead text-center">no data found</p>
+        <% } else {%>
+          <h1 class="text-center mb-3">NFT World</h1>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <% data.forEach(element => { %>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <a href="" style="text-decoration: none; ">
+                  <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="img/<%= element.imgfile %>" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+                  <p style="color: black;" class="lead text-center fw-bold"><%= element.name %></p></a>
+                  <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. with supply <span class="text-secondary font-underline fw-bold"><%= element.supply %></span></p>
+                    <p class="lead card-text text-center">Author : <a class="fw-bold" href=""><%= element.author %></a></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      </div>
+                      <small class="text-muted"></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+          <% } %>
+      </div>
+    </div>
+  

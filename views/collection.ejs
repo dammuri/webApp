@@ -1,0 +1,20 @@
+<h1 class="display-5 text-center">Submit your NFT</h1>
+<form class="form-control w-50 mx-auto mt-3" action="/collection" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" aria-describedby="name" name="name">
+    </div>
+    <div class="mb-3">
+      <label for="supply" class="form-label">supply</label>
+      <input type="number" class="form-control" id="supply" name="supply">
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">author</label>
+      <input type="text" class="form-control" id="name" name="author">
+    </div>
+    <div class="mb-3">
+        <label for="pict" class="form-label">submit your pict</label>
+        <input type="file" class="form-control" name="pict" accept="image/*">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
